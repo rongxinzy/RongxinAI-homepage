@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClawX - The desktop control plane for OpenClaw agents</title>
+    <meta
+      name="description"
+      content="ClawX is a local-first desktop app for OpenClaw AI agents. Configure providers, skills, channels, cron automations, and local models without living in the terminal."
+    />
+    <meta name="theme-color" content="#10130f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ClawX - The desktop control plane for OpenClaw agents" />
+    <meta
+      property="og:description"
+      content="A polished desktop interface for OpenClaw agents: chat, skills, channels, cron automation, provider setup, and local model workflows."
+    />
+    <meta property="og:image" content="./assets/og-image.webp" />
+    <meta property="og:url" content="https://rongxinzy.github.io/clawx-homepage/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="./assets/brand/logo.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="ClawX home">
+        <img src="./assets/brand/logo.svg" width="36" height="36" alt="" />
+        <span>ClawX</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#product">Product</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#local-first">Local-first</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-cta" href="https://github.com/rongxinzy/ClawX/releases">Download</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <picture class="hero-media">
+          <source srcset="./assets/screenshots/chat.webp" type="image/webp" />
+          <img src="./assets/screenshots/chat.webp" alt="ClawX desktop chat interface" />
+        </picture>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">OpenClaw agents, without terminal overhead</p>
+          <h1 id="hero-title">Run your agent stack from a real desktop app.</h1>
+          <p class="hero-copy">
+            ClawX turns OpenClaw into a polished control plane for providers, skills, messaging channels,
+            scheduled jobs, and local model workflows. Keep the runtime close. Make the interface humane.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="https://github.com/rongxinzy/ClawX/releases">
+              Download ClawX
+              <span aria-hidden="true">-></span>
+            </a>
+            <a class="button button-secondary" href="https://github.com/rongxinzy/ClawX">
+              View source
+            </a>
+          </div>
+          <dl class="hero-stats" aria-label="Product highlights">
+            <div>
+              <dt>3</dt>
+              <dd>desktop platforms</dd>
+            </div>
+            <div>
+              <dt>24/7</dt>
+              <dd>scheduled agent runs</dd>
+            </div>
+            <div>
+              <dt>10+</dt>
+              <dd>model providers</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Capabilities">
+        <div class="ticker-track">
+          <span>Provider setup</span>
+          <span>Secure keychain storage</span>
+          <span>Cron automation</span>
+          <span>Skill marketplace</span>
+          <span>Channel routing</span>
+          <span>Ollama workflows</span>
+          <span>Agent switching</span>
+          <span>Local transcripts</span>
+          <span>Provider setup</span>
+          <span>Secure keychain storage</span>
+          <span>Cron automation</span>
+          <span>Skill marketplace</span>
+          <span>Channel routing</span>
+          <span>Ollama workflows</span>
+          <span>Agent switching</span>
+          <span>Local transcripts</span>
+        </div>
+      </section>
+
+      <section class="section product-section" id="product" aria-labelledby="product-title">
+        <div class="section-kicker">Product</div>
+        <div class="section-heading">
+          <h2 id="product-title">Everything agents need, surfaced as software you can operate.</h2>
+          <p>
+            ClawX keeps OpenClaw's power intact while replacing scattered config files and CLI context
+            switching with clear workflows, validation, and durable UI state.
+          </p>
+        </div>
+
+        <div class="showcase" data-tabs>
+          <div class="showcase-copy">
+            <div class="tab-list" role="tablist" aria-label="Product screenshots">
+              <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="chat">Chat</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="cron">Cron</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="skills">Skills</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="channels">Channels</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="models">Models</button>
+            </div>
+
+            <article class="tab-panel is-active" data-panel="chat">
+              <h3>Chat with agents directly</h3>
+              <p>Use a modern chat surface with Markdown, math, agent routing, and isolated workspaces.</p>
+            </article>
+            <article class="tab-panel" data-panel="cron" hidden>
+              <h3>Schedule work that keeps running</h3>
+              <p>Create recurring jobs, delivery targets, and channel-specific notifications without editing JSON.</p>
+            </article>
+            <article class="tab-panel" data-panel="skills" hidden>
+              <h3>Install skills without package-manager friction</h3>
+              <p>Browse bundled and discovered skills, inspect their source location, and keep the managed directory in sync.</p>
+            </article>
+            <article class="tab-panel" data-panel="channels" hidden>
+              <h3>Route agents to real channels</h3>
+              <p>Manage Telegram, WeChat, Discord, Slack-style workflows, and account bindings from one interface.</p>
+            </article>
+            <article class="tab-panel" data-panel="models" hidden>
+              <h3>Bring cloud and local models together</h3>
+              <p>Configure providers, validate credentials, manage Ollama, import GGUF files, and run local inference.</p>
+            </article>
+          </div>
+
+          <div class="screen-shell">
+            <img data-screen="chat" class="screen is-active" src="./assets/screenshots/chat.webp" alt="ClawX chat screen" />
+            <img data-screen="cron" class="screen" src="./assets/screenshots/cron.webp" alt="ClawX cron automation screen" />
+            <img data-screen="skills" class="screen" src="./assets/screenshots/skills.webp" alt="ClawX skills screen" />
+            <img data-screen="channels" class="screen" src="./assets/screenshots/channels.webp" alt="ClawX channels screen" />
+            <img data-screen="models" class="screen" src="./assets/screenshots/models.webp" alt="ClawX models screen" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section workflows-section" id="workflows" aria-labelledby="workflows-title">
+        <div class="section-kicker">Workflows</div>
+        <div class="split-heading">
+          <h2 id="workflows-title">Built for people who want agents to do work, not create chores.</h2>
+          <p>
+            The app handles the operational layer: process lifecycle, provider checks, channel wiring,
+            runtime folders, transcript history, and first-run setup.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <article>
+            <span class="line-icon" aria-hidden="true"></span>
+            <h3>Guided setup</h3>
+            <p>Pick language, connect a provider, choose skills, and verify the runtime before the first chat.</p>
+          </article>
+          <article>
+            <span class="line-icon" aria-hidden="true"></span>
+            <h3>Provider control</h3>
+            <p>Use OpenAI, Anthropic, Google, Moonshot, Qwen, OpenRouter, custom endpoints, and local Ollama models.</p>
+          </article>
+          <article>
+            <span class="line-icon" aria-hidden="true"></span>
+            <h3>Channel operations</h3>
+            <p>Bind accounts, select defaults, and keep agent delivery paths visible instead of hidden in config.</p>
+          </article>
+          <article>
+            <span class="line-icon" aria-hidden="true"></span>
+            <h3>Runtime visibility</h3>
+            <p>Inspect gateway state, run OpenClaw Doctor, and keep advanced tools available without leaving the app.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section local-section" id="local-first" aria-labelledby="local-title">
+        <div class="local-panel">
+          <div>
+            <div class="section-kicker">Local-first</div>
+            <h2 id="local-title">Your agents run on your machine. Your credentials stay in the OS keychain.</h2>
+            <p>
+              ClawX uses Electron Store for local app state and native keychain storage for provider credentials.
+              It proxies backend calls through the desktop host layer, so renderer code does not own transport policy.
+            </p>
+          </div>
+          <ul class="check-list" aria-label="Local-first properties">
+            <li>Bundled OpenClaw runtime with automatic gateway lifecycle management</li>
+            <li>Structured transcript history from local OpenClaw session files</li>
+            <li>No database setup, no hosted control plane, no browser-only dependency</li>
+            <li>Advanced developer tools available behind explicit settings</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section download-section" aria-labelledby="download-title">
+        <div class="download-copy">
+          <p class="eyebrow">Mac, Windows, Linux</p>
+          <h2 id="download-title">Install the desktop app and connect your first provider.</h2>
+          <p>Start from a release build, or clone the repository and run the Vite + Electron dev server locally.</p>
+        </div>
+        <div class="download-actions">
+          <a class="button button-primary" href="https://github.com/rongxinzy/ClawX/releases">Get the latest release</a>
+          <a class="button button-secondary" href="https://github.com/rongxinzy/ClawX#development">Read developer setup</a>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="section-kicker">FAQ</div>
+        <h2 id="faq-title">Sharp answers before you install.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Is ClawX the same thing as OpenClaw?</summary>
+            <p>No. ClawX is a desktop interface built on top of OpenClaw. It embeds and manages the runtime so users can operate agents through a GUI.</p>
+          </details>
+          <details>
+            <summary>Do I need an AI provider key?</summary>
+            <p>Yes for cloud model usage. ClawX helps configure providers and stores credentials in the native OS keychain. Local Ollama workflows are also supported.</p>
+          </details>
+          <details>
+            <summary>Can non-developers use it?</summary>
+            <p>Yes. The main flows are visual: setup, provider validation, chat, skills, channels, cron automation, and local model management.</p>
+          </details>
+          <details>
+            <summary>Is it open source?</summary>
+            <p>Yes. The application is MIT-licensed and the source code is available on GitHub.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="./assets/brand/logo.svg" width="32" height="32" alt="" />
+        <span>ClawX</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/rongxinzy/ClawX">GitHub</a>
+        <a href="https://github.com/rongxinzy/ClawX/releases">Releases</a>
+        <a href="https://github.com/rongxinzy/ClawX/issues">Issues</a>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ClawX",
+        "description": "A local-first desktop control plane for OpenClaw AI agents.",
+        "operatingSystem": "macOS, Windows, Linux",
+        "applicationCategory": "DeveloperApplication",
+        "url": "https://rongxinzy.github.io/clawx-homepage/",
+        "codeRepository": "https://github.com/rongxinzy/ClawX",
+        "license": "https://opensource.org/licenses/MIT",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">RongX chip shrimp app icon</title>
+  <desc id="desc">A minimal blue logo combining a shrimp silhouette with a rounded microchip outline.</desc>
+  <defs>
+    <linearGradient id="blue" x1="190" y1="170" x2="830" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="0.55" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <style>
+      .stroke{fill:none;stroke:url(#blue);stroke-width:54;stroke-linecap:round;stroke-linejoin:round}
+      .fill{fill:url(#blue)}
+      .white{fill:#fff}
+    </style>
+  </defs>
+
+  <!-- chip pins -->
+  <g class="stroke">
+    <path d="M338 112v88M452 112v88M566 112v88M680 112v88"/>
+    <path d="M338 824v88M452 824v88M566 824v88M680 824v88"/>
+    <path d="M112 338h88M112 452h88M112 566h88M112 680h88"/>
+    <path d="M824 338h88M824 452h88M824 566h88M824 680h88"/>
+  </g>
+
+  <!-- rounded chip body -->
+  <rect x="200" y="200" width="624" height="624" rx="118" class="stroke"/>
+
+  <!-- shrimp body segments -->
+  <path class="fill" d="M603 675c-95 92-256 78-342-23-66-78-79-187-33-280 26-53 70-95 124-119 35-15 76 6 84 43 5 23-6 47-26 59-78 46-102 145-56 222 49 83 159 105 235 47 24-18 58-12 74 14 8 13 4 27-60 37z"/>
+  <path class="white" d="M302 430c75 23 150 20 218-9" opacity=".95"/>
+  <path d="M270 505c88 45 190 51 286 8" class="stroke" style="stroke-width:25"/>
+  <path d="M318 628c67 33 148 35 223 3" class="stroke" style="stroke-width:25"/>
+
+  <!-- shrimp head / back line -->
+  <path class="stroke" d="M400 310c128-71 319-39 407 57 32 35 18 91-28 106L481 566"/>
+  <path class="stroke" d="M485 568c61-20 153-49 269-87"/>
+  <circle cx="646" cy="374" r="24" class="fill"/>
+
+  <!-- circuit claw / legs -->
+  <path class="stroke" style="stroke-width:38" d="M535 682l87-88"/>
+  <path class="stroke" style="stroke-width:38" d="M582 746l101-102"/>
+  <circle cx="646" cy="570" r="26" fill="#fff" stroke="url(#blue)" stroke-width="34"/>
+  <circle cx="710" cy="634" r="26" fill="#fff" stroke="url(#blue)" stroke-width="34"/>
+</svg>
