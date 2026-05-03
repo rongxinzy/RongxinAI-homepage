@@ -4,10 +4,10 @@ const languageButtons = [...document.querySelectorAll("[data-lang]")];
 
 const translations = {
   zh: {
-    pageTitle: "RongxinAI / ClawX - OpenClaw 智能体桌面控制台",
+    pageTitle: "RongxinAI - OpenClaw 智能体桌面控制台",
     pageDescription:
-      "RongxinAI / ClawX 是面向 OpenClaw AI 智能体的本地优先桌面应用。无需长期使用终端，即可配置模型提供商、技能、消息渠道、定时任务和本地模型。",
-    ogTitle: "RongxinAI / ClawX - OpenClaw 智能体桌面控制台",
+      "RongxinAI 是面向 OpenClaw AI 智能体的本地优先桌面应用。无需长期使用终端，即可配置模型提供商、技能、消息渠道、定时任务和本地模型。",
+    ogTitle: "RongxinAI - OpenClaw 智能体桌面控制台",
     ogDescription:
       "一个更现代的 OpenClaw 桌面界面：聊天、技能、渠道、定时任务、模型提供商和本地模型工作流。",
     skip: "跳到主要内容",
@@ -19,8 +19,8 @@ const translations = {
     heroEyebrow: "OpenClaw 智能体，不必困在终端里",
     heroTitle: "用真正的桌面应用运行你的智能体栈。",
     heroCopy:
-      "RongxinAI / ClawX 将 OpenClaw 变成一个精致的桌面控制台，统一管理模型提供商、技能、消息渠道、定时任务和本地模型工作流。运行时留在本机，体验更接近现代软件。",
-    heroPrimary: "下载 ClawX",
+      "RongxinAI 将 OpenClaw 变成一个精致的桌面控制台，统一管理模型提供商、技能、消息渠道、定时任务和本地模型工作流。运行时留在本机，体验更接近现代软件。",
+    heroPrimary: "下载 RongxinAI",
     heroSecondary: "查看源码",
     statPlatforms: "桌面平台",
     statRuns: "定时智能体任务",
@@ -36,7 +36,7 @@ const translations = {
     productKicker: "产品",
     productTitle: "智能体需要的能力，都变成你能操作的软件。",
     productCopy:
-      "ClawX 保留 OpenClaw 的完整能力，同时用清晰的工作流、即时校验和持久化界面状态，替代分散的配置文件和终端上下文切换。",
+      "RongxinAI 保留 OpenClaw 的完整能力，同时用清晰的工作流、即时校验和持久化界面状态，替代分散的配置文件和终端上下文切换。",
     tabChat: "聊天",
     tabCron: "定时任务",
     tabSkills: "技能",
@@ -68,7 +68,7 @@ const translations = {
     localKicker: "本地优先",
     localTitle: "智能体运行在你的电脑上。密钥留在系统钥匙串里。",
     localCopy:
-      "ClawX 使用 Electron Store 保存本地应用状态，并通过系统原生钥匙串保存模型提供商凭证。后端调用由桌面宿主层代理，渲染进程不负责传输策略。",
+      "RongxinAI 使用 Electron Store 保存本地应用状态，并通过系统原生钥匙串保存模型提供商凭证。后端调用由桌面宿主层代理，渲染进程不负责传输策略。",
     localItemRuntime: "内置 OpenClaw 运行时，并自动管理 Gateway 生命周期",
     localItemHistory: "从本地 OpenClaw 会话文件读取结构化历史记录",
     localItemNoDb: "无需数据库、无需托管控制台，也不依赖纯浏览器环境",
@@ -80,21 +80,21 @@ const translations = {
     downloadSecondary: "查看开发者安装",
     faqKicker: "FAQ",
     faqTitle: "安装前先把关键问题讲清楚。",
-    faqOpenClawQ: "ClawX 和 OpenClaw 是同一个东西吗？",
-    faqOpenClawA: "不是。ClawX 是构建在 OpenClaw 之上的桌面界面，它内置并管理运行时，让用户通过 GUI 操作智能体。",
+    faqOpenClawQ: "RongxinAI 和 OpenClaw 是同一个东西吗？",
+    faqOpenClawA: "不是。RongxinAI 是构建在 OpenClaw 之上的桌面界面，它内置并管理运行时，让用户通过 GUI 操作智能体。",
     faqKeyQ: "我需要模型提供商 API Key 吗？",
     faqKeyA:
-      "使用云端模型时需要。ClawX 会帮助你配置提供商，并把凭证保存到系统原生钥匙串里；同时也支持本地 Ollama 工作流。",
+      "使用云端模型时需要。RongxinAI 会帮助你配置提供商，并把凭证保存到系统原生钥匙串里；同时也支持本地 Ollama 工作流。",
     faqNoCodeQ: "非开发者可以使用吗？",
     faqNoCodeA: "可以。核心流程都是可视化的：初始化、模型提供商校验、聊天、技能、渠道、定时任务和本地模型管理。",
     faqOpenSourceQ: "它是开源的吗？",
     faqOpenSourceA: "是。应用采用 MIT 许可证，源代码托管在 GitHub。",
   },
   en: {
-    pageTitle: "ClawX - The desktop control plane for OpenClaw agents",
+    pageTitle: "RongxinAI - The desktop control plane for OpenClaw agents",
     pageDescription:
-      "ClawX is a local-first desktop app for OpenClaw AI agents. Configure providers, skills, channels, cron automations, and local models without living in the terminal.",
-    ogTitle: "ClawX - The desktop control plane for OpenClaw agents",
+      "RongxinAI is a local-first desktop app for OpenClaw AI agents. Configure providers, skills, channels, cron automations, and local models without living in the terminal.",
+    ogTitle: "RongxinAI - The desktop control plane for OpenClaw agents",
     ogDescription:
       "A polished desktop interface for OpenClaw agents: chat, skills, channels, cron automation, provider setup, and local model workflows.",
     skip: "Skip to content",
@@ -106,8 +106,8 @@ const translations = {
     heroEyebrow: "OpenClaw agents, without terminal overhead",
     heroTitle: "Run your agent stack from a real desktop app.",
     heroCopy:
-      "ClawX turns OpenClaw into a polished control plane for providers, skills, messaging channels, scheduled jobs, and local model workflows. Keep the runtime close. Make the interface humane.",
-    heroPrimary: "Download ClawX",
+      "RongxinAI turns OpenClaw into a polished control plane for providers, skills, messaging channels, scheduled jobs, and local model workflows. Keep the runtime close. Make the interface humane.",
+    heroPrimary: "Download RongxinAI",
     heroSecondary: "View source",
     statPlatforms: "desktop platforms",
     statRuns: "scheduled agent runs",
@@ -123,7 +123,7 @@ const translations = {
     productKicker: "Product",
     productTitle: "Everything agents need, surfaced as software you can operate.",
     productCopy:
-      "ClawX keeps OpenClaw's power intact while replacing scattered config files and CLI context switching with clear workflows, validation, and durable UI state.",
+      "RongxinAI keeps OpenClaw's power intact while replacing scattered config files and CLI context switching with clear workflows, validation, and durable UI state.",
     tabChat: "Chat",
     tabCron: "Cron",
     tabSkills: "Skills",
@@ -155,7 +155,7 @@ const translations = {
     localKicker: "Local-first",
     localTitle: "Your agents run on your machine. Your credentials stay in the OS keychain.",
     localCopy:
-      "ClawX uses Electron Store for local app state and native keychain storage for provider credentials. It proxies backend calls through the desktop host layer, so renderer code does not own transport policy.",
+      "RongxinAI uses Electron Store for local app state and native keychain storage for provider credentials. It proxies backend calls through the desktop host layer, so renderer code does not own transport policy.",
     localItemRuntime: "Bundled OpenClaw runtime with automatic gateway lifecycle management",
     localItemHistory: "Structured transcript history from local OpenClaw session files",
     localItemNoDb: "No database setup, no hosted control plane, no browser-only dependency",
@@ -167,12 +167,12 @@ const translations = {
     downloadSecondary: "Read developer setup",
     faqKicker: "FAQ",
     faqTitle: "Sharp answers before you install.",
-    faqOpenClawQ: "Is ClawX the same thing as OpenClaw?",
+    faqOpenClawQ: "Is RongxinAI the same thing as OpenClaw?",
     faqOpenClawA:
-      "No. ClawX is a desktop interface built on top of OpenClaw. It embeds and manages the runtime so users can operate agents through a GUI.",
+      "No. RongxinAI is a desktop interface built on top of OpenClaw. It embeds and manages the runtime so users can operate agents through a GUI.",
     faqKeyQ: "Do I need an AI provider key?",
     faqKeyA:
-      "Yes for cloud model usage. ClawX helps configure providers and stores credentials in the native OS keychain. Local Ollama workflows are also supported.",
+      "Yes for cloud model usage. RongxinAI helps configure providers and stores credentials in the native OS keychain. Local Ollama workflows are also supported.",
     faqNoCodeQ: "Can non-developers use it?",
     faqNoCodeA:
       "Yes. The main flows are visual: setup, provider validation, chat, skills, channels, cron automation, and local model management.",
