@@ -79,16 +79,24 @@ button {
 
 .site-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0.9rem;
+  left: 50%;
   z-index: 10;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  width: min(1120px, calc(100% - 2rem));
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 2rem;
-  padding: 1rem clamp(1rem, 3vw, 2.5rem);
+  gap: 1.4rem;
+  padding: 0.48rem 0.55rem;
+  border: 1px solid rgba(244, 242, 234, 0.14);
+  border-radius: 999px;
+  background: rgba(16, 19, 15, 0.58);
+  box-shadow:
+    0 18px 70px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(244, 242, 234, 0.08);
   color: var(--ink);
+  transform: translateX(-50%);
+  backdrop-filter: blur(22px);
   transition:
     background 220ms var(--ease),
     border-color 220ms var(--ease),
@@ -96,9 +104,8 @@ button {
 }
 
 .site-header.is-scrolled {
-  border-bottom: 1px solid var(--line);
-  background: rgba(16, 19, 15, 0.72);
-  backdrop-filter: blur(18px);
+  border-color: rgba(244, 242, 234, 0.2);
+  background: rgba(16, 19, 15, 0.82);
 }
 
 .brand,
@@ -114,9 +121,14 @@ button {
   line-height: 1;
 }
 
+.brand {
+  padding: 0 0.45rem 0 0.1rem;
+}
+
 .site-header nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.45rem;
   font-size: 0.9rem;
   color: rgba(244, 242, 234, 0.72);
@@ -176,9 +188,9 @@ button {
 .header-cta {
   border: 1px solid rgba(244, 242, 234, 0.22);
   border-radius: 999px;
-  padding: 0.62rem 0.95rem;
+  padding: 0.62rem 1rem;
   font-size: 0.9rem;
-  background: rgba(244, 242, 234, 0.06);
+  background: rgba(244, 242, 234, 0.1);
   transition:
     transform 160ms var(--ease),
     background 160ms var(--ease);
@@ -191,27 +203,44 @@ button {
 
 .hero {
   position: relative;
-  min-height: 92dvh;
+  min-height: 91dvh;
   display: grid;
-  align-items: end;
+  align-items: center;
   overflow: hidden;
-  padding: 8rem clamp(1.2rem, 4vw, 4rem) 4.5rem;
+  padding: 7.25rem clamp(1.2rem, 4vw, 4rem) 3.7rem;
+  background:
+    linear-gradient(115deg, rgba(217, 122, 87, 0.1), transparent 32%),
+    linear-gradient(180deg, rgba(244, 242, 234, 0.035), transparent 44%),
+    var(--bg);
   isolation: isolate;
 }
 
 .hero-media {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: -7vw;
+  bottom: 0;
+  left: max(34vw, 420px);
   z-index: -3;
+  display: block;
+  opacity: 0.74;
+}
+
+.hero-media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, var(--bg), transparent 16%, transparent 68%, rgba(16, 19, 15, 0.62)),
+    linear-gradient(0deg, var(--bg), transparent 24%, transparent 72%, rgba(16, 19, 15, 0.36));
 }
 
 .hero-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
-  filter: saturate(0.86) contrast(1.02);
-  transform: scale(1.02);
+  object-position: center;
+  filter: saturate(0.9) contrast(1.02);
 }
 
 .hero-scrim {
@@ -219,14 +248,14 @@ button {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(16, 19, 15, 0.9) 0%, rgba(16, 19, 15, 0.67) 38%, rgba(16, 19, 15, 0.18) 76%),
-    linear-gradient(0deg, var(--bg) 0%, rgba(16, 19, 15, 0.68) 17%, transparent 48%),
-    linear-gradient(180deg, rgba(16, 19, 15, 0.68), transparent 25%);
+    linear-gradient(90deg, rgba(16, 19, 15, 0.98) 0%, rgba(16, 19, 15, 0.9) 34%, rgba(16, 19, 15, 0.44) 70%, rgba(16, 19, 15, 0.78) 100%),
+    linear-gradient(0deg, var(--bg) 0%, rgba(16, 19, 15, 0.58) 18%, transparent 44%),
+    linear-gradient(180deg, rgba(16, 19, 15, 0.76), transparent 28%);
 }
 
 .hero-content {
-  width: min(760px, 100%);
-  padding-bottom: clamp(1rem, 4vw, 3rem);
+  width: min(700px, 100%);
+  padding-top: 1.6rem;
 }
 
 .eyebrow,
@@ -239,6 +268,20 @@ button {
   text-transform: uppercase;
 }
 
+.hero .eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 0.72rem;
+  border: 1px solid rgba(136, 176, 106, 0.24);
+  border-radius: 999px;
+  background: rgba(136, 176, 106, 0.08);
+  box-shadow: inset 0 1px 0 rgba(244, 242, 234, 0.08);
+  color: #a9ca90;
+  text-transform: none;
+}
+
 h1,
 h2,
 h3,
@@ -247,17 +290,17 @@ p {
 }
 
 h1 {
-  margin-bottom: 1.25rem;
-  max-width: 13ch;
-  font-size: 7.4rem;
-  line-height: 0.9;
+  margin-bottom: 1.15rem;
+  max-width: 12ch;
+  font-size: 5.8rem;
+  line-height: 0.96;
   letter-spacing: 0;
 }
 
 .hero-copy {
-  max-width: 690px;
+  max-width: 640px;
   color: rgba(244, 242, 234, 0.82);
-  font-size: 1.25rem;
+  font-size: 1.16rem;
   line-height: 1.55;
 }
 
@@ -266,7 +309,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin-top: 2rem;
+  margin-top: 1.65rem;
 }
 
 .button {
@@ -315,8 +358,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  width: min(630px, 100%);
-  margin: 3rem 0 0;
+  width: min(560px, 100%);
+  margin: 2.35rem 0 0;
   border-top: 1px solid rgba(244, 242, 234, 0.2);
 }
 
@@ -659,6 +702,8 @@ details p {
   .site-header {
     grid-template-columns: 1fr auto;
     gap: 1rem;
+    top: 0.65rem;
+    width: min(760px, calc(100% - 1rem));
   }
 
   .site-header nav {
@@ -686,7 +731,13 @@ details p {
   }
 
   h1 {
-    font-size: 5.2rem;
+    font-size: 4.55rem;
+  }
+
+  .hero-media {
+    left: 30vw;
+    right: -18vw;
+    opacity: 0.58;
   }
 
   .section-heading h2,
@@ -700,23 +751,68 @@ details p {
 
 @media (max-width: 680px) {
   .hero {
-    min-height: 88dvh;
-    padding-top: 6.5rem;
+    min-height: 82dvh;
+    padding-top: 6.8rem;
+    padding-bottom: 2rem;
+  }
+
+  .site-header {
+    gap: 0.55rem;
+    padding: 0.42rem;
+  }
+
+  .brand {
+    gap: 0.48rem;
+    padding-right: 0.1rem;
+  }
+
+  .brand img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .brand span {
+    font-size: 0.88rem;
+  }
+
+  .header-actions {
+    gap: 0.38rem;
+  }
+
+  .language-switch {
+    grid-template-columns: repeat(2, minmax(30px, 1fr));
+  }
+
+  .language-option {
+    min-height: 28px;
+    padding: 0 0.42rem;
+    font-size: 0.78rem;
+  }
+
+  .header-cta {
+    padding: 0.52rem 0.72rem;
+    font-size: 0.82rem;
+  }
+
+  .hero-media {
+    inset: 5rem -92vw 0 18vw;
+    opacity: 0.22;
   }
 
   .hero-media img {
-    object-position: 58% center;
+    object-position: center;
   }
 
   .hero-scrim {
     background:
-      linear-gradient(90deg, rgba(16, 19, 15, 0.9), rgba(16, 19, 15, 0.58)),
-      linear-gradient(0deg, var(--bg) 0%, rgba(16, 19, 15, 0.72) 26%, transparent 58%);
+      linear-gradient(90deg, rgba(16, 19, 15, 0.96), rgba(16, 19, 15, 0.72)),
+      linear-gradient(0deg, var(--bg) 0%, rgba(16, 19, 15, 0.82) 28%, transparent 62%);
   }
 
   h1 {
-    max-width: 10ch;
-    font-size: 3.45rem;
+    max-width: 9ch;
+    font-size: 3.05rem;
+    line-height: 1;
   }
 
   .hero-copy {
@@ -737,12 +833,22 @@ details p {
   }
 
   .hero-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 1.45rem;
   }
 
   .hero-stats div {
-    border-bottom: 1px solid rgba(244, 242, 234, 0.12);
-    padding: 0.9rem 0;
+    border-bottom: 0;
+    padding: 0.78rem 0.45rem 0 0;
+  }
+
+  .hero-stats dt {
+    font-size: 1.62rem;
+  }
+
+  .hero-stats dd {
+    font-size: 0.76rem;
+    line-height: 1.2;
   }
 
   .workflow-grid {

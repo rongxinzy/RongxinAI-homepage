@@ -15,13 +15,13 @@ const translations = {
     navWorkflows: "工作流",
     navLocal: "本地优先",
     navFaq: "FAQ",
-    navDownload: "下载",
-    heroEyebrow: "OpenClaw 智能体，不必困在终端里",
-    heroTitle: "用真正的桌面应用运行你的智能体栈。",
+    navDownload: "获取",
+    heroEyebrow: "本地优先的 OpenClaw 桌面体验",
+    heroTitle: "RongxinAI 智能体桌面控制台",
     heroCopy:
-      "RongxinAI 将 OpenClaw 变成一个精致的桌面控制台，统一管理模型提供商、技能、消息渠道、定时任务和本地模型工作流。运行时留在本机，体验更接近现代软件。",
-    heroPrimary: "下载 RongxinAI",
-    heroSecondary: "查看源码",
+      "把 OpenClaw 的模型、技能、渠道和定时任务收进一个本地桌面应用。配置更清楚，运行更稳定，团队不必在终端和配置文件之间切换。",
+    heroPrimary: "获取 RongxinAI",
+    heroSecondary: "查看 GitHub",
     statPlatforms: "桌面平台",
     statRuns: "定时智能体任务",
     statProviders: "模型提供商",
@@ -103,12 +103,12 @@ const translations = {
     navLocal: "Local-first",
     navFaq: "FAQ",
     navDownload: "Download",
-    heroEyebrow: "OpenClaw agents, without terminal overhead",
-    heroTitle: "Run your agent stack from a real desktop app.",
+    heroEyebrow: "Local-first desktop experience for OpenClaw",
+    heroTitle: "RongxinAI Agent Desktop",
     heroCopy:
-      "RongxinAI turns OpenClaw into a polished control plane for providers, skills, messaging channels, scheduled jobs, and local model workflows. Keep the runtime close. Make the interface humane.",
-    heroPrimary: "Download RongxinAI",
-    heroSecondary: "View source",
+      "Bring OpenClaw models, skills, channels, and scheduled work into one local desktop app. Configuration becomes clearer, runtime work stays close, and teams stop bouncing between terminals and config files.",
+    heroPrimary: "Get RongxinAI",
+    heroSecondary: "View GitHub",
     statPlatforms: "desktop platforms",
     statRuns: "scheduled agent runs",
     statProviders: "model providers",
@@ -201,7 +201,7 @@ const setLanguage = (language) => {
 
   const heroSource = document.querySelector("[data-hero-source]");
   const heroImage = document.querySelector("[data-hero-img]");
-  const heroPath = `./assets/screenshots/${language}/chat.webp`;
+  const heroPath = `./assets/hero/${language}.webp`;
   if (heroSource) heroSource.srcset = heroPath;
   if (heroImage) {
     heroImage.src = heroPath;
