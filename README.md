@@ -1,4 +1,4 @@
-# ClawX Homepage
+# RongxinAI Homepage
 
 Static GitHub Pages site for [ClawX](https://github.com/rongxinzy/ClawX).
 
