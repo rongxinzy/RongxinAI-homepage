@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClawX - The desktop control plane for OpenClaw agents</title>
+    <title>RongxinAI / ClawX - OpenClaw 智能体桌面控制台</title>
     <meta
       name="description"
-      content="ClawX is a local-first desktop app for OpenClaw AI agents. Configure providers, skills, channels, cron automations, and local models without living in the terminal."
+      content="RongxinAI / ClawX 是面向 OpenClaw AI 智能体的本地优先桌面应用。无需长期使用终端，即可配置模型提供商、技能、消息渠道、定时任务和本地模型。"
     />
     <meta name="theme-color" content="#10130f" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ClawX - The desktop control plane for OpenClaw agents" />
+    <meta property="og:title" content="RongxinAI / ClawX - OpenClaw 智能体桌面控制台" />
     <meta
       property="og:description"
-      content="A polished desktop interface for OpenClaw agents: chat, skills, channels, cron automation, provider setup, and local model workflows."
+      content="一个更现代的 OpenClaw 桌面界面：聊天、技能、渠道、定时任务、模型提供商和本地模型工作流。"
     />
     <meta property="og:image" content="./assets/og-image.webp" />
     <meta property="og:url" content="https://rongxinzy.github.io/RongxinAI-homepage/" />
@@ -22,57 +22,68 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="ClawX home">
+      <a class="brand" href="#top" aria-label="RongxinAI home">
         <img src="./assets/brand/logo.svg" width="36" height="36" alt="" />
-        <span>ClawX</span>
+        <span>RongxinAI</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#product">Product</a>
-        <a href="#workflows">Workflows</a>
-        <a href="#local-first">Local-first</a>
-        <a href="#faq">FAQ</a>
+        <a href="#product" data-i18n="navProduct">产品</a>
+        <a href="#workflows" data-i18n="navWorkflows">工作流</a>
+        <a href="#local-first" data-i18n="navLocal">本地优先</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
       </nav>
-      <a class="header-cta" href="https://github.com/rongxinzy/ClawX/releases">Download</a>
+      <div class="header-actions">
+        <div class="language-switch" aria-label="Language">
+          <button class="language-option is-active" type="button" data-lang="zh">中文</button>
+          <button class="language-option" type="button" data-lang="en">EN</button>
+        </div>
+        <a class="header-cta" href="https://github.com/rongxinzy/ClawX/releases" data-i18n="navDownload">下载</a>
+      </div>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <picture class="hero-media">
-          <source srcset="./assets/screenshots/chat.webp" type="image/webp" />
-          <img src="./assets/screenshots/chat.webp" alt="ClawX desktop chat interface" />
+          <source data-hero-source srcset="./assets/screenshots/zh/chat.webp" type="image/webp" />
+          <img
+            data-hero-img
+            src="./assets/screenshots/zh/chat.webp"
+            alt="RongxinAI 桌面聊天界面"
+            data-alt-zh="RongxinAI 桌面聊天界面"
+            data-alt-en="ClawX desktop chat interface"
+          />
         </picture>
         <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">OpenClaw agents, without terminal overhead</p>
-          <h1 id="hero-title">Run your agent stack from a real desktop app.</h1>
-          <p class="hero-copy">
-            ClawX turns OpenClaw into a polished control plane for providers, skills, messaging channels,
-            scheduled jobs, and local model workflows. Keep the runtime close. Make the interface humane.
+          <p class="eyebrow" data-i18n="heroEyebrow">OpenClaw 智能体，不必困在终端里</p>
+          <h1 id="hero-title" data-i18n="heroTitle">用真正的桌面应用运行你的智能体栈。</h1>
+          <p class="hero-copy" data-i18n="heroCopy">
+            RongxinAI / ClawX 将 OpenClaw 变成一个精致的桌面控制台，统一管理模型提供商、技能、消息渠道、定时任务和本地模型工作流。运行时留在本机，体验更接近现代软件。
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button button-primary" href="https://github.com/rongxinzy/ClawX/releases">
-              Download ClawX
+              <span data-i18n="heroPrimary">下载 ClawX</span>
               <span aria-hidden="true">-></span>
             </a>
-            <a class="button button-secondary" href="https://github.com/rongxinzy/ClawX">
-              View source
+            <a class="button button-secondary" href="https://github.com/rongxinzy/ClawX" data-i18n="heroSecondary">
+              查看源码
             </a>
           </div>
           <dl class="hero-stats" aria-label="Product highlights">
             <div>
               <dt>3</dt>
-              <dd>desktop platforms</dd>
+              <dd data-i18n="statPlatforms">桌面平台</dd>
             </div>
             <div>
               <dt>24/7</dt>
-              <dd>scheduled agent runs</dd>
+              <dd data-i18n="statRuns">定时智能体任务</dd>
             </div>
             <div>
               <dt>10+</dt>
-              <dd>model providers</dd>
+              <dd data-i18n="statProviders">模型提供商</dd>
             </div>
           </dl>
         </div>
@@ -80,107 +91,105 @@
 
       <section class="ticker" aria-label="Capabilities">
         <div class="ticker-track">
-          <span>Provider setup</span>
-          <span>Secure keychain storage</span>
-          <span>Cron automation</span>
-          <span>Skill marketplace</span>
-          <span>Channel routing</span>
-          <span>Ollama workflows</span>
-          <span>Agent switching</span>
-          <span>Local transcripts</span>
-          <span>Provider setup</span>
-          <span>Secure keychain storage</span>
-          <span>Cron automation</span>
-          <span>Skill marketplace</span>
-          <span>Channel routing</span>
-          <span>Ollama workflows</span>
-          <span>Agent switching</span>
-          <span>Local transcripts</span>
+          <span data-i18n="tickerProvider">模型提供商配置</span>
+          <span data-i18n="tickerKeychain">系统钥匙串存储</span>
+          <span data-i18n="tickerCron">定时任务自动化</span>
+          <span data-i18n="tickerSkills">技能市场</span>
+          <span data-i18n="tickerChannels">渠道路由</span>
+          <span data-i18n="tickerOllama">Ollama 工作流</span>
+          <span data-i18n="tickerAgents">智能体切换</span>
+          <span data-i18n="tickerTranscripts">本地会话记录</span>
+          <span data-i18n="tickerProvider">模型提供商配置</span>
+          <span data-i18n="tickerKeychain">系统钥匙串存储</span>
+          <span data-i18n="tickerCron">定时任务自动化</span>
+          <span data-i18n="tickerSkills">技能市场</span>
+          <span data-i18n="tickerChannels">渠道路由</span>
+          <span data-i18n="tickerOllama">Ollama 工作流</span>
+          <span data-i18n="tickerAgents">智能体切换</span>
+          <span data-i18n="tickerTranscripts">本地会话记录</span>
         </div>
       </section>
 
       <section class="section product-section" id="product" aria-labelledby="product-title">
-        <div class="section-kicker">Product</div>
+        <div class="section-kicker" data-i18n="productKicker">产品</div>
         <div class="section-heading">
-          <h2 id="product-title">Everything agents need, surfaced as software you can operate.</h2>
-          <p>
-            ClawX keeps OpenClaw's power intact while replacing scattered config files and CLI context
-            switching with clear workflows, validation, and durable UI state.
+          <h2 id="product-title" data-i18n="productTitle">智能体需要的能力，都变成你能操作的软件。</h2>
+          <p data-i18n="productCopy">
+            ClawX 保留 OpenClaw 的完整能力，同时用清晰的工作流、即时校验和持久化界面状态，替代分散的配置文件和终端上下文切换。
           </p>
         </div>
 
         <div class="showcase" data-tabs>
           <div class="showcase-copy">
             <div class="tab-list" role="tablist" aria-label="Product screenshots">
-              <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="chat">Chat</button>
-              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="cron">Cron</button>
-              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="skills">Skills</button>
-              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="channels">Channels</button>
-              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="models">Models</button>
+              <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="chat" data-i18n="tabChat">聊天</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="cron" data-i18n="tabCron">定时任务</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="skills" data-i18n="tabSkills">技能</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="channels" data-i18n="tabChannels">渠道</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="models" data-i18n="tabModels">模型</button>
             </div>
 
             <article class="tab-panel is-active" data-panel="chat">
-              <h3>Chat with agents directly</h3>
-              <p>Use a modern chat surface with Markdown, math, agent routing, and isolated workspaces.</p>
+              <h3 data-i18n="panelChatTitle">直接和智能体对话</h3>
+              <p data-i18n="panelChatCopy">现代聊天界面内置 Markdown、数学公式、智能体路由和隔离工作区。</p>
             </article>
             <article class="tab-panel" data-panel="cron" hidden>
-              <h3>Schedule work that keeps running</h3>
-              <p>Create recurring jobs, delivery targets, and channel-specific notifications without editing JSON.</p>
+              <h3 data-i18n="panelCronTitle">让任务按计划持续运行</h3>
+              <p data-i18n="panelCronCopy">通过可视化表单创建周期任务、投递目标和渠道通知，不再手写 JSON。</p>
             </article>
             <article class="tab-panel" data-panel="skills" hidden>
-              <h3>Install skills without package-manager friction</h3>
-              <p>Browse bundled and discovered skills, inspect their source location, and keep the managed directory in sync.</p>
+              <h3 data-i18n="panelSkillsTitle">安装技能，不需要包管理器心智负担</h3>
+              <p data-i18n="panelSkillsCopy">浏览内置和已发现技能，查看真实目录，并保持托管技能目录同步。</p>
             </article>
             <article class="tab-panel" data-panel="channels" hidden>
-              <h3>Route agents to real channels</h3>
-              <p>Manage Telegram, WeChat, Discord, Slack-style workflows, and account bindings from one interface.</p>
+              <h3 data-i18n="panelChannelsTitle">把智能体接入真实渠道</h3>
+              <p data-i18n="panelChannelsCopy">在同一界面管理 Telegram、微信、Discord 等渠道工作流和账号绑定。</p>
             </article>
             <article class="tab-panel" data-panel="models" hidden>
-              <h3>Bring cloud and local models together</h3>
-              <p>Configure providers, validate credentials, manage Ollama, import GGUF files, and run local inference.</p>
+              <h3 data-i18n="panelModelsTitle">统一云端模型和本地模型</h3>
+              <p data-i18n="panelModelsCopy">配置模型提供商、校验凭证、管理 Ollama、导入 GGUF 文件并运行本地推理。</p>
             </article>
           </div>
 
           <div class="screen-shell">
-            <img data-screen="chat" class="screen is-active" src="./assets/screenshots/chat.webp" alt="ClawX chat screen" />
-            <img data-screen="cron" class="screen" src="./assets/screenshots/cron.webp" alt="ClawX cron automation screen" />
-            <img data-screen="skills" class="screen" src="./assets/screenshots/skills.webp" alt="ClawX skills screen" />
-            <img data-screen="channels" class="screen" src="./assets/screenshots/channels.webp" alt="ClawX channels screen" />
-            <img data-screen="models" class="screen" src="./assets/screenshots/models.webp" alt="ClawX models screen" />
+            <img data-screen="chat" data-src-zh="./assets/screenshots/zh/chat.webp" data-src-en="./assets/screenshots/en/chat.webp" data-alt-zh="ClawX 聊天界面" data-alt-en="ClawX chat screen" class="screen is-active" src="./assets/screenshots/zh/chat.webp" alt="ClawX 聊天界面" />
+            <img data-screen="cron" data-src-zh="./assets/screenshots/zh/cron.webp" data-src-en="./assets/screenshots/en/cron.webp" data-alt-zh="ClawX 定时任务界面" data-alt-en="ClawX cron automation screen" class="screen" src="./assets/screenshots/zh/cron.webp" alt="ClawX 定时任务界面" />
+            <img data-screen="skills" data-src-zh="./assets/screenshots/zh/skills.webp" data-src-en="./assets/screenshots/en/skills.webp" data-alt-zh="ClawX 技能界面" data-alt-en="ClawX skills screen" class="screen" src="./assets/screenshots/zh/skills.webp" alt="ClawX 技能界面" />
+            <img data-screen="channels" data-src-zh="./assets/screenshots/zh/channels.webp" data-src-en="./assets/screenshots/en/channels.webp" data-alt-zh="ClawX 渠道界面" data-alt-en="ClawX channels screen" class="screen" src="./assets/screenshots/zh/channels.webp" alt="ClawX 渠道界面" />
+            <img data-screen="models" data-src-zh="./assets/screenshots/zh/models.webp" data-src-en="./assets/screenshots/en/models.webp" data-alt-zh="ClawX 模型界面" data-alt-en="ClawX models screen" class="screen" src="./assets/screenshots/zh/models.webp" alt="ClawX 模型界面" />
           </div>
         </div>
       </section>
 
       <section class="section workflows-section" id="workflows" aria-labelledby="workflows-title">
-        <div class="section-kicker">Workflows</div>
+        <div class="section-kicker" data-i18n="workflowsKicker">工作流</div>
         <div class="split-heading">
-          <h2 id="workflows-title">Built for people who want agents to do work, not create chores.</h2>
-          <p>
-            The app handles the operational layer: process lifecycle, provider checks, channel wiring,
-            runtime folders, transcript history, and first-run setup.
+          <h2 id="workflows-title" data-i18n="workflowsTitle">为真正想让智能体干活的人设计，而不是制造新的维护负担。</h2>
+          <p data-i18n="workflowsCopy">
+            应用接管运维层：进程生命周期、模型提供商检查、渠道连接、运行时目录、会话历史和首次启动配置。
           </p>
         </div>
 
         <div class="workflow-grid">
           <article>
             <span class="line-icon" aria-hidden="true"></span>
-            <h3>Guided setup</h3>
-            <p>Pick language, connect a provider, choose skills, and verify the runtime before the first chat.</p>
+            <h3 data-i18n="workflowSetupTitle">引导式初始化</h3>
+            <p data-i18n="workflowSetupCopy">选择语言、连接模型提供商、启用技能，并在首次对话前完成运行时验证。</p>
           </article>
           <article>
             <span class="line-icon" aria-hidden="true"></span>
-            <h3>Provider control</h3>
-            <p>Use OpenAI, Anthropic, Google, Moonshot, Qwen, OpenRouter, custom endpoints, and local Ollama models.</p>
+            <h3 data-i18n="workflowProviderTitle">模型提供商控制</h3>
+            <p data-i18n="workflowProviderCopy">支持 OpenAI、Anthropic、Google、Moonshot、Qwen、OpenRouter、自定义端点和本地 Ollama 模型。</p>
           </article>
           <article>
             <span class="line-icon" aria-hidden="true"></span>
-            <h3>Channel operations</h3>
-            <p>Bind accounts, select defaults, and keep agent delivery paths visible instead of hidden in config.</p>
+            <h3 data-i18n="workflowChannelsTitle">渠道运营</h3>
+            <p data-i18n="workflowChannelsCopy">绑定账号、选择默认账号，并让智能体投递路径保持可见，而不是埋在配置里。</p>
           </article>
           <article>
             <span class="line-icon" aria-hidden="true"></span>
-            <h3>Runtime visibility</h3>
-            <p>Inspect gateway state, run OpenClaw Doctor, and keep advanced tools available without leaving the app.</p>
+            <h3 data-i18n="workflowRuntimeTitle">运行时可见性</h3>
+            <p data-i18n="workflowRuntimeCopy">查看 Gateway 状态、运行 OpenClaw Doctor，并在应用内访问高级开发工具。</p>
           </article>
         </div>
       </section>
@@ -188,53 +197,52 @@
       <section class="section local-section" id="local-first" aria-labelledby="local-title">
         <div class="local-panel">
           <div>
-            <div class="section-kicker">Local-first</div>
-            <h2 id="local-title">Your agents run on your machine. Your credentials stay in the OS keychain.</h2>
-            <p>
-              ClawX uses Electron Store for local app state and native keychain storage for provider credentials.
-              It proxies backend calls through the desktop host layer, so renderer code does not own transport policy.
+            <div class="section-kicker" data-i18n="localKicker">本地优先</div>
+            <h2 id="local-title" data-i18n="localTitle">智能体运行在你的电脑上。密钥留在系统钥匙串里。</h2>
+            <p data-i18n="localCopy">
+              ClawX 使用 Electron Store 保存本地应用状态，并通过系统原生钥匙串保存模型提供商凭证。后端调用由桌面宿主层代理，渲染进程不负责传输策略。
             </p>
           </div>
           <ul class="check-list" aria-label="Local-first properties">
-            <li>Bundled OpenClaw runtime with automatic gateway lifecycle management</li>
-            <li>Structured transcript history from local OpenClaw session files</li>
-            <li>No database setup, no hosted control plane, no browser-only dependency</li>
-            <li>Advanced developer tools available behind explicit settings</li>
+            <li data-i18n="localItemRuntime">内置 OpenClaw 运行时，并自动管理 Gateway 生命周期</li>
+            <li data-i18n="localItemHistory">从本地 OpenClaw 会话文件读取结构化历史记录</li>
+            <li data-i18n="localItemNoDb">无需数据库、无需托管控制台，也不依赖纯浏览器环境</li>
+            <li data-i18n="localItemDevtools">高级开发工具放在明确的设置入口之后</li>
           </ul>
         </div>
       </section>
 
       <section class="section download-section" aria-labelledby="download-title">
         <div class="download-copy">
-          <p class="eyebrow">Mac, Windows, Linux</p>
-          <h2 id="download-title">Install the desktop app and connect your first provider.</h2>
-          <p>Start from a release build, or clone the repository and run the Vite + Electron dev server locally.</p>
+          <p class="eyebrow" data-i18n="downloadKicker">Mac, Windows, Linux</p>
+          <h2 id="download-title" data-i18n="downloadTitle">安装桌面应用，连接你的第一个模型提供商。</h2>
+          <p data-i18n="downloadCopy">从 Release 安装包开始，或克隆仓库并在本地运行 Vite + Electron 开发服务。</p>
         </div>
         <div class="download-actions">
-          <a class="button button-primary" href="https://github.com/rongxinzy/ClawX/releases">Get the latest release</a>
-          <a class="button button-secondary" href="https://github.com/rongxinzy/ClawX#development">Read developer setup</a>
+          <a class="button button-primary" href="https://github.com/rongxinzy/ClawX/releases" data-i18n="downloadPrimary">获取最新版</a>
+          <a class="button button-secondary" href="https://github.com/rongxinzy/ClawX#development" data-i18n="downloadSecondary">查看开发者安装</a>
         </div>
       </section>
 
       <section class="section faq-section" id="faq" aria-labelledby="faq-title">
-        <div class="section-kicker">FAQ</div>
-        <h2 id="faq-title">Sharp answers before you install.</h2>
+        <div class="section-kicker" data-i18n="faqKicker">FAQ</div>
+        <h2 id="faq-title" data-i18n="faqTitle">安装前先把关键问题讲清楚。</h2>
         <div class="faq-list">
           <details>
-            <summary>Is ClawX the same thing as OpenClaw?</summary>
-            <p>No. ClawX is a desktop interface built on top of OpenClaw. It embeds and manages the runtime so users can operate agents through a GUI.</p>
+            <summary data-i18n="faqOpenClawQ">ClawX 和 OpenClaw 是同一个东西吗？</summary>
+            <p data-i18n="faqOpenClawA">不是。ClawX 是构建在 OpenClaw 之上的桌面界面，它内置并管理运行时，让用户通过 GUI 操作智能体。</p>
           </details>
           <details>
-            <summary>Do I need an AI provider key?</summary>
-            <p>Yes for cloud model usage. ClawX helps configure providers and stores credentials in the native OS keychain. Local Ollama workflows are also supported.</p>
+            <summary data-i18n="faqKeyQ">我需要模型提供商 API Key 吗？</summary>
+            <p data-i18n="faqKeyA">使用云端模型时需要。ClawX 会帮助你配置提供商，并把凭证保存到系统原生钥匙串里；同时也支持本地 Ollama 工作流。</p>
           </details>
           <details>
-            <summary>Can non-developers use it?</summary>
-            <p>Yes. The main flows are visual: setup, provider validation, chat, skills, channels, cron automation, and local model management.</p>
+            <summary data-i18n="faqNoCodeQ">非开发者可以使用吗？</summary>
+            <p data-i18n="faqNoCodeA">可以。核心流程都是可视化的：初始化、模型提供商校验、聊天、技能、渠道、定时任务和本地模型管理。</p>
           </details>
           <details>
-            <summary>Is it open source?</summary>
-            <p>Yes. The application is MIT-licensed and the source code is available on GitHub.</p>
+            <summary data-i18n="faqOpenSourceQ">它是开源的吗？</summary>
+            <p data-i18n="faqOpenSourceA">是。应用采用 MIT 许可证，源代码托管在 GitHub。</p>
           </details>
         </div>
       </section>
@@ -243,7 +251,7 @@
     <footer class="site-footer">
       <div class="footer-brand">
         <img src="./assets/brand/logo.svg" width="32" height="32" alt="" />
-        <span>ClawX</span>
+        <span>RongxinAI</span>
       </div>
       <div class="footer-links">
         <a href="https://github.com/rongxinzy/ClawX">GitHub</a>
@@ -257,7 +265,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "ClawX",
-        "description": "A local-first desktop control plane for OpenClaw AI agents.",
+        "description": "面向 OpenClaw AI 智能体的本地优先桌面控制台。",
         "operatingSystem": "macOS, Windows, Linux",
         "applicationCategory": "DeveloperApplication",
         "url": "https://rongxinzy.github.io/RongxinAI-homepage/",
